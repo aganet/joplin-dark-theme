@@ -1,0 +1,224 @@
+/* Style for rendered Markdown */
+
+:root {
+  --dark-main-selected: #434d32;
+  --links: #65a2ff;
+  --sidebar: #656464;
+  --red: #ed8796;
+  --yellow: #eed49f;
+  --lavender: #dadada; /* highlights color text */
+  --text: #dadada; /* text color */
+  --textDarker: #bababa;
+  --darkblue: #272c3c;
+  --base: #1e1e1e; /* text background color */
+  --dark-block: #242424; /* code block background */
+  --crust: #262626;
+  --white: #d9e0ee;
+  --black: #000000;
+  --light: #f5f5f5;
+  --lighter-grey: #c3bac6;
+  --light-grey: #988ba2;
+  --green: #7fdc63;
+
+  --font-face: "Noto Sans", Arial, Helvetica, sans-serif;
+  --font-mono: "Monospace", Courier, monospace;
+
+  --icon-size: 16px;
+
+  --regular: 400;
+  --bolder: 600;
+
+  --scroll-radius: 3px;
+
+  --opacity-0-8: 0.8;
+}
+
+
+/* Scrollbars */
+::-webkit-scrollbar-thumb {
+  background-color: var(--sidebar) !important;
+  border-radius: var(--scroll-radius) !important;
+}
+
+body {
+  background-color: var(--base);
+  font-size: 15px;
+  font-family: "Noto Sans", Arial, Helvetica, sans-serif;
+}
+
+
+/*********************************************************************************
+* TITLES
+*********************************************************************************/
+
+h1 {
+  border-bottom: 1px solid var(--base) !important;
+  font-weight: var(--bolder) !important;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: 0 !important;
+  font-weight: var(--bolder) !important;
+}
+
+/*********************************************************************************
+* LINKS
+*********************************************************************************/
+
+a {
+  color: var(--links) !important;
+  text-decoration: underline !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* Joplin icon in Joplin link */
+.resource-icon {
+  background-color: var(--links) !important;
+}
+
+/*********************************************************************************
+* CODE BLOCK
+*********************************************************************************/
+
+pre,
+.hljs {
+  background-color: var(--dark-block) !important;
+  font-family: var(--font-mono) !important;
+  padding: 10px !important;
+  color: var(--textDarker) !important;
+  font-size: 15px !important;
+  overflow: scroll !important;
+}
+
+/* Inline code */
+.inline-code {
+  background-color: transparent !important;
+  border: 0 !important;
+  font-family: var(--font-mono) !important;
+  color: var(--yellow) !important;
+  font-size: 15px !important;
+}
+
+/*********************************************************************************
+* BLOCKQUOTE
+*********************************************************************************/
+
+blockquote {
+  background-color: var(--darkblue) !important;
+  padding: 10px !important;
+  color: var(--light) !important;
+  font-size: 15px !important;
+  font-style: italic !important;
+  border: 0 !important;
+  border-left: 5px solid var(--green) !important;
+}
+
+
+/*********************************************************************************
+* HIGHLIGHTING
+*********************************************************************************/
+
+::selection {
+  background-color: var(--lavender) !important;
+  color: var(--crust) !important;
+}
+
+mark,
+mark strong {
+  background: var(--yellow) !important;
+  color: var(--crust) !important;
+}
+
+/* Highlighted searched item */
+mark[data-markjs] {
+  background-color: var(--lavender) !important;
+}
+
+
+/*********************************************************************************
+* PRINT VERSION
+*********************************************************************************/
+
+@media print {
+  #rendered-md,
+  body,
+  th,
+  td {
+    /* background-color: var(--white) !important; */
+    background-color: #ffffff !important;
+    font-family: var(--font-face) !important;
+  }
+
+  p,
+  ul,
+  ol,
+  li {
+    color: var(--black) !important;
+  }
+
+  strong {
+    color: var(--black) !important;
+  }
+
+  h1 {
+    border-bottom: 1px solid var(--black) !important;
+    font-weight: var(--bolder) !important;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    border-bottom: 0 !important;
+    font-weight: var(--bolder) !important;
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid var(--black) !important;
+    margin: 2.5em 0 !important;
+  }
+
+  a {
+    color: var(--red) !important;
+    text-decoration: underline !important;
+  }
+
+  /* Inline code */
+  .inline-code {
+    background-color: transparent !important;
+    border: 0 !important;
+    font-family: var(--font-mono) !important;
+    /* color: var(--yellow) !important; */
+    color: #1e1e2e !important;
+    font-size: 15px !important;
+  }
+
+  pre,
+  .hljs {
+    background-color: var(--lighter-grey) !important;
+    font-family: var(--font-mono) !important;
+    padding: 10px !important;
+    color: var(--crust) !important;
+    font-size: 14px !important;
+    overflow: scroll !important;
+  }
+
+  blockquote {
+    background-color: var(--lighter-grey) !important;
+    padding: 10px !important;
+    color: var(--crust) !important;
+    font-size: 15px !important;
+    font-style: italic !important;
+    border: 0 !important;
+    border-left: 5px solid var(--light-grey) !important;
+  }
+}

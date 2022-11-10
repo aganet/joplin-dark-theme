@@ -1,0 +1,464 @@
+/* Original theme at https://github.com/stysebae/joplin-vsc-material-theme, modified for Catppuccin. */
+/* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
+
+:root {
+  --dark-main-selected: #255f77;
+  --links: #65a2ff;
+  --sidebar: #656464;
+  --white: #f8f8f0;
+  --yellow: #edea3c;
+  --green: #a6da95;
+  --blue: #6fb3d2;
+  --lavender: #c9d1d9;
+  --text: #dadada; /* text color */
+  --textDarker: #bababa;
+  --overlay0: #6c728d;
+  --surface2: #5a5f78;
+  --surface0: #363a4f;
+  --base: #1e1e1e; /* text background color */
+  --textDarker: #bababa;
+  --dark-block: #242424;
+  --crust: #262626;
+  --green-terminal: #b4d682;
+  --orange: #fda331;
+  --font-face: "Noto Sans", Arial, Helvetica, sans-serif;
+  --font-mono: "Roboto Mono", Courier, monospace;
+  --icon-size: 16px;
+  --scroll-radius: 3px;
+
+  --regular: 400;
+  --bolder: 600;
+  --opacity-0-8: 0.8;
+
+  --h1: #edea3c;
+  --h2: #edea3c;
+  --h3: #6db8b4;
+  --h4: #f17d7d;
+  --h5: #71eb71;
+  --h6: #6783ff;
+}
+
+/* Font used by Joplin */
+* {
+  font-family: var(--font-face) !important;
+}
+
+html,
+body {
+  background-color: var(--base) !important;
+  font-weight: var(--regular) !important;
+  color: var(--light) !important;
+}
+.CodeMirror-selected {
+  /* background-color: var(--lighter-grey) !important; */
+  background: #6b6b6b !important;
+}
+.rli-root {
+  background-color: var(--base) !important;
+}
+
+/* Icons */
+.fa,
+.far,
+.fas {
+  font-weight: 900 !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: var(--icon-size) !important;
+}
+
+::placeholder {
+  color: var(--lavender) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar-thumb {
+  background-color: var(--sidebar) !important;
+  border-radius: var(--scroll-radius) !important;
+}
+
+/*********************************************************************************
+* PANELS
+*********************************************************************************/
+
+/*********************************************************************************
+* SIDEBAR
+*********************************************************************************/
+
+.eNteRa {
+  color: var(--textDarker) !important;
+}
+
+
+/* Folders sidebar background */
+.bHqyGr {
+  background: var(--dark-main) !important;
+}
+
+/* Folders Selection */
+
+.all-notes:checked {
+  background-color: var(--dark-main-selected) !important;
+}
+
+.list-item-container.selected {
+  background-color: var(--dark-main-selected) !important;
+}
+
+.list-item-container.selected a {
+  color: var(--dark-grey) !important;
+}
+
+a.bxcDPk div.note-count-label {
+  color: var(--white) !important;
+}
+
+.note-count-label {
+  color: var(--white) !important;
+}
+
+.sidebar {
+  background: var(--base) !important;
+}
+
+.resizableLayoutItem {
+  background: var(--base) !important;
+}
+
+.eOarHg {
+  color: var(--textDarker) !important;
+}
+
+/*********************************************************************************
+*NOTE LIST
+*********************************************************************************/
+
+.note-list {
+  background-color: var(--dark-block) !important;
+  border: none !important;
+  color: var(--textDarker) !important;
+}
+/* remove notes separator in list */
+.note-list *::before {
+  border-bottom: none !important;
+}
+
+.note-list > div > a 
+ {
+  color: var(--textDarker) !important;
+}
+
+/*********************************************************************************
+* EDITOR
+*********************************************************************************/
+
+/* BUTTONS SEARCH, SORT NOTES, NEW NOTE AND NEW TASK */
+
+div[height="50"] {
+  background-color: var(--dark-block) !important;
+}
+
+div[height="50"] input {
+  border: none !important;
+  color: var(--text) !important;
+  background-color: var(--dark-block) !important;
+}
+
+div[height="50"] button {
+  background: transparent !important;
+  color: var(--text) !important;
+  border: 0 !important;
+}
+
+div[height="50"] button:hover {
+  opacity: var(--opacity-0-8);
+}
+
+div[height="50"] button span {
+  color: var(--text) !important;
+}
+
+/* EDITOR TOOLBAR */
+
+/* Title */
+/* Changes frequently with updates, need to keep tabs */
+.rli-editor .cCOtNv > input {
+  padding-top: 5px;
+  background-color: var(--base) !important;
+}
+.editor-toolbar {
+  background-color: transparent !important;
+}
+
+.editor-toolbar > div > a:hover {
+  opacity: var(--opacity-0-8);
+}
+
+/* Breadcrumbs (In:...) - Used in tag listings */
+.cJOYJm {
+  background-color: var(--lavender) !important;
+  margin: 0px !important;
+  padding: 5px !important;
+}
+
+.cJOYJm:hover {
+  opacity: var(--opacity-0-8);
+}
+
+/* CONTENT */
+/* Empty notebook */
+.rli-editor > div > div:empty {
+  background-color: var(--base) !important;
+}
+
+/* Editor layout splitter */
+.rli-editor > div > div > div > div > div > div > div:last-of-type {
+  border-color: var(--base) !important;
+}
+div.sc-AxirZ.hagDvo,
+div.sc-AxirZ.hagDvo > div {
+  background-color: var(--dark-block) !important;
+  color: var(--text) !important;
+}
+
+/* NOTE SEARCH BAR */
+.note-search-bar,
+.note-search-bar > div > div {
+  background-color: var(--base) !important;
+  width: 100%;
+  border: 0 !important;
+}
+
+.note-search-bar input {
+  border: 0 !important;
+  padding: 5px;
+  color: var(--text) !important;
+  background-color: var(--base) !important;
+}
+
+/* TAGS */
+.tag-bar {
+  background-color: transparent !important;
+}
+
+.tag-list > span {
+  color: var(--lavender) !important;
+  background-color: var(--crust) !important;
+}
+
+/*********************************************************************************
+* EDITOR (CODE MIRROR)
+*********************************************************************************/
+
+/* HEADERS */
+
+/* headers colors */
+.cm-s-material-darker span.cm-header-1 {
+  color: var(--h1) !important;
+}
+
+.cm-s-material-darker span.cm-header-2 {
+  color: var(--h2) !important;
+}
+
+.cm-s-material-darker span.cm-header-3 {
+  color: var(--h3) !important;
+}
+
+.cm-s-material-darker span.cm-header-4 {
+  color: var(--h4) !important;
+}
+
+.cm-s-material-darker span.cm-header-5 {
+  color: var(--h5) !important;
+}
+
+.cm-s-material-darker span.cm-header-6 {
+  color: var(--h6) !important;
+}
+
+.cm-s-material-darker.CodeMirror {
+  background-color: var(--base) !important;
+  color: var(--text) !important;
+}
+
+/* Header */
+.cm-header {
+  color: var(--lavender) !important;
+}
+
+/* Italics/Emphasis, Bold, BoldItalics */
+.cm-strong,
+.cm-strong.cm-em {
+  color: var(--orange) !important;
+}
+
+.cm-em {
+  color: var(--blue) !important;
+}
+
+/* Lists (Bullet/number/todo) */
+.cm-variable-2,
+.cm-variable-3,
+.cm-keyword {
+  color: var(--text) !important;
+}
+
+.cm-s-material-darker .cm-variable-2.cm-rm-list-token {
+  color: var(--text) !important;
+}
+
+/* Links (link) */
+.cm-url {
+  color: var(--links) !important;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Links (text) */
+.cm-link-text {
+  color: var(--links) !important;
+}
+pre.CodeMirror-line {
+  color: var(--text) !important;
+}
+/* Image link in editor */
+span.cm-string.cm-url.cm-overlay.cm-rm-link.cm-overlay.cm-rm-image {
+  color: var(--lavender) !important;
+}
+/* Comment outside code block */
+pre.CodeMirror-line span.cm-comment {
+  color: var(--yellow) !important;
+  border: 0 !important;
+}
+
+/* Codeblock selection colour */
+/* For some reason, the CodeMirror selection does not pick the colour correctly, left for now. */
+pre.CodeMirror-line span.CodeMirror-selectedtext {
+  /* background: var(--surface2) !important; */
+  background: #6b6b6b !important;
+}
+
+div[class^="cm-jn-code-block-background "]::selection {
+  background-color: var(--base) !important;
+  border-color: var(--base) !important;
+}
+
+.cm-jn-monospace {
+  color: var(--textDarker) !important;
+}
+
+pre.cm-jn-code-block.CodeMirror-line
+  span.cm-comment.cm-jn-monospace.CodeMirror-selectedtext {
+  /* background: var(--surface2) !important; */
+  background: #6b6b6b !important;
+}
+pre.cm-jn-code-block.CodeMirror-line::selection {
+  /* background: var(--surface2) !important; */
+  background: #6b6b6b !important;
+}
+div.cm-jn-code-block-background.CodeMirror-linebackground::selection {
+  /* background: var(--surface2) !important; */
+  background: #6b6b6b !important;
+}
+pre.cm-jn-code-block.CodeMirror-line::selection span {
+  /* background: var(--surface2) !important; */
+  background: #6b6b6b !important;
+}
+
+div.CodeMirror span.cm-comment.cm-jn-inline-code {
+  background-color: transparent !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Code Block Text */
+div.CodeMirror span.cm-comment:not(.cm-jn-inline-code) {
+  /*color: var(--text) !important; */
+  color: var(--green-terminal) !important;
+  background-color: transparent !important;
+}
+
+/* Code block background */
+div.CodeMirror div.cm-jn-code-block-background {
+  background-color: var(--dark-block) !important;
+}
+
+/* Horizontal Line */
+.cm-hr {
+  color: var(--overlay0) !important;
+}
+
+/* Cursor colour */
+.CodeMirror-cursor {
+  border-left: 1px solid var(--white) !important;
+  border-right: none !important;
+  width: 0 !important;
+}
+.cm-fat-cursor div.CodeMirror-cursor {
+  width: 10px !important;
+  border: 0 !important;
+  background: var(--white) !important;
+}
+.cm-fat-cursor div.CodeMirror-cursors {
+  z-index: 1 !important;
+}
+.cm-fat-cursor-mark {
+  background-color: rgba(150, 205, 251, 0.5) !important;
+}
+
+.cm-animate-fat-cursor {
+  width: auto !important;
+  border: 0;
+  background-color: var(--white) !important;
+}
+
+/* Rich Markdown Extra CSS Classes
+Please opt in "Add additional CSS classes for enhanced customization" in plugin
+settings, see https://github.com/CalebJohn/joplin-rich-markdown#extra-css */
+
+.cm-header.cm-rm-header-token {
+  color: var(--green) !important;
+}
+
+.cm-strong.cm-rm-strong-token {
+  color: var(--blue) !important;
+}
+
+pre.cm-rm-blockquote.CodeMirror-line {
+  font-style: italic !important;
+}
+
+/* Command palette coloring */
+
+div.modal-dialog {
+  background-color: var(--dark-block) !important;
+}
+
+.modal-dialog > div > input {
+  background-color: var(--crust) !important;
+  color: var(--text) !important;
+}
+
+.modal-dialog > .item-list {
+  background-color: var(--crust) !important;
+  color: var(--text) !important;
+}
+
+.modal-dialog > .item-list div[class="selected"] {
+  background-color: var(--surface2) !important;
+}
+
+.modal-dialog > .item-list div[class="selected"] > div {
+  color: var(--text) !important;
+}
+
+.modal-dialog > .item-list > * {
+  color: var(--text) !important;
+}
+
+/* Reduce the size and visibility of the header hash tags.   color: grey; */
+/* The additional CSS option must be enabled */
+div.CodeMirror .cm-header.cm-rm-header-token {
+  font-size: 0.9em;
+  color: grey;
+}
